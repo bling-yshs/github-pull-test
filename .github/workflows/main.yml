@@ -27,4 +27,4 @@ jobs:
           git config user.email "550029691@qq.com"
           git add .
           git commit -m "GitHub Actions Make Star at time"
-          git push --quiet "https://${{ secrets.MY_TOKEN }}@github.com/valetzx/stars" HEAD:main
+          git push --quiet "https://${{ secrets.MY_TOKEN }}@github.com/bling-yshs/github-pull-test" HEAD:main
