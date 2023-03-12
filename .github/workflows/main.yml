@@ -20,11 +20,12 @@ jobs:
         run: |
           git clone https://gitee.com/bling_yshs/Yunzai-v3-Installation-Steps tmp
           cp -r tmp/* .
+          rm -rf tmp
           
       - name: Push
         run: |
-          git config user.name "valetzx"
-          git config user.email "550029691@qq.com"
+          git config user.name "bling-yshs"
+          git config user.email "test@qq.com"
           git add .
           git commit -m "GitHub Actions Make Star at time"
           git push --quiet "https://${{ secrets.MY_TOKEN }}@github.com/bling-yshs/github-pull-test" HEAD:main
