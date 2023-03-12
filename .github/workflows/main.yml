@@ -1,0 +1,25 @@
+name: mirror
+
+on:
+  watch:
+    types: [started]
+  schedule:
+    - cron: '0 15 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-18.04]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Clone
+        run: |
+          git clone https://gitee.com/bling_yshs/Yunzai-v3-Installation-Steps tmp
+          cp -r tmp/* .
+          
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v4
