@@ -1,12 +1,11 @@
 # 云崽 bot-v3 安装步骤
 
 > 本教程支持的操作系统：Win10 及以上版本、Windows Server 2012 及以上版本
-
-## 本体安装步骤
-
 > **下方密码统一为 0000**  
 > **以下命令如果没有特别指明的话，都是在云崽根目录下执行**  
 > **视频内的命令可能有误，一切步骤以本安装教程内的为准**
+
+## 本体安装步骤
 
 1. 下载 node,git,redis [https://yshs.lanzouy.com/b09zk5u1g](https://yshs.lanzouy.com/b09zk5u1g)
 
@@ -18,13 +17,11 @@
 
 3. 进入 Yunzai-bot 文件夹
 
-4. 安装 pnpm：
+4. 安装 pnpm (安装一次就够了)：
 
    ```
    npm install pnpm -g --registry=https://registry.npmmirror.com
    ```
-
-   > 注意，pnpm **只需安装一次**即可，如果多次安装会提示 `changed 1 package` ，这样提示也是正常的，说明你已经安装过 pnpm 了，不影响后续使用
 
 5. 安装云崽本体的依赖：
 
@@ -365,7 +362,7 @@
 
 - 喵喵插件的 `#xx照片` `xx图片` 功能用不了？
 
-  - <img src="picture/miaomiao_image.png" width="50%"> 把 `Yunzai-Bot/plugins/miao-plugin/resources` 的 `character-img` 文件复制一份到 `Yunzai-Bot/plugins/miao-plugin/resources/miao-res-plus` 里就好
+  - <img src="picture/miaomiao_image.png" width="50%"> 把 `Yunzai-Bot/plugins/miao-plugin/resources/character-img` 里面的所有文件文件复制，粘贴到到 `Yunzai-Bot/plugins/miao-plugin/resources/miao-res-plus` 里就好
 
 ### 其它
 
