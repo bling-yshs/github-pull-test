@@ -269,7 +269,7 @@
 
   - [点击跳转教程](https://www.bilibili.com/video/BV1TN4y1N74E?p=10)
 
-- 装完 node 但是还是提示 `npm:command not found`
+- 装完 node 但是还是提示 `bash: npm: command not found`
 
   - 跟着教程手动安装一下 node.js 就行[https://blog.csdn.net/Y2ANGAO/article/details/124201290
     ](https://blog.csdn.net/Y2ANGAO/article/details/124201290)
@@ -363,7 +363,11 @@
 
 - 喵喵插件的 `#xx照片` `xx图片` 功能用不了？
 
-  - <img src="picture/miaomiao_image.png" width="50%"> 把 `Yunzai-Bot/plugins/miao-plugin/resources/character-img` 里面的所有文件文件复制，粘贴到到 `Yunzai-Bot/plugins/miao-plugin/resources/miao-res-plus` 里就好
+  - <img src="picture/miaomiao_image.png" width="50%"> 删除 `Yunzai-Bot/plugins/miao-plugin/resources/miao-res-plus` 文件夹，然后发送
+
+  ```
+  #喵喵更新图像
+  ```
 
 ### 其它
 
