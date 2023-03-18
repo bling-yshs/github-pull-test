@@ -43,6 +43,10 @@
    node app
    ```
 
+- **注意登录的时候一定要用密码登录**
+- **注意登录的时候一定要用密码登录**
+- **注意登录的时候一定要用密码登录**
+
 > 一键启动脚本 [https://yshs.lanzouy.com/b09zlibch](https://yshs.lanzouy.com/b09zlibch)
 
 ---
@@ -319,6 +323,8 @@
     platform: 4
     ```
 
+  - 最后如果还是还是登不上的话(遇到错误码 237)，就换个小号(可以新注册)
+
   - 感谢 @XxxX 提供的方法
 
 - `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
@@ -489,5 +495,7 @@
   # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
   platform: 4
   ```
+
+- 最后如果还是还是登不上的话(遇到错误码 237)，就换个小号(可以新注册)
 
 - 感谢 @XxxX 提供的方法
