@@ -276,32 +276,17 @@
 
 - 装完 node 但是还是提示 `bash: npm: command not found`
 
-  - 跟着教程手动安装一下 node.js 就行[https://blog.csdn.net/Y2ANGAO/article/details/124201290
-    ](https://blog.csdn.net/Y2ANGAO/article/details/124201290)
+  - 跟着教程手动安装一下 node.js 就行<br> [https://note.youdao.com/s/ImCA210l
+    ](https://note.youdao.com/s/ImCA210l)
 
 <a name="bbgd"></a>
 
-- 提示 `qq版本过低` ？或者 `[禁止登陆]登录失败，建议升级最新版本后重试，或通过问题反馈与我们联系。` ？或者 `当前网络不稳定，登录失败。推荐使用常用设备或通过手机号登录。` ？<br>
+- 提示 `qq版本过低` ？或者 `[禁止登陆]登录失败，建议升级最新版本后重试，或通过问题反馈与我们联系。` ？或者 `当前网络不稳定，登录失败。推荐使用常用设备或通过手机号登录。` ？或者 `错误码45` `错误码237`<br>
 
-  1. 执行
+  1. 确保你已经更新到喵喵的云崽，[点击跳转教程](#update)
+  2. 进入 `Yunzai-Bot\data` ，找到 **device.json** 删掉 (没有就无视)
 
-     ```
-     git remote set-url origin https://gitee.com/yoimiya-kokomi/Yunzai-Bot.git && git checkout main && git pull
-     ```
-
-  2. 执行
-
-     ```
-      git reset --hard origin/main
-     ```
-
-  3. 执行
-     ```
-     pnpm update
-     ```
-  4. 进入`Yunzai-Bot\data`，找到自己的**QQ 号文件夹**，与 **device.json** 把这两个东西删掉 (没有就无视)
-
-  5. `node app` 正常启动云崽即可，目前<br>**必须使用密码登录**<br>**必须使用密码登录**<br>**必须使用密码登录**<br>可以输入以下命令来切换登录方式：
+  3. `node app` 正常启动云崽即可，目前<br>**必须使用密码登录**<br>**必须使用密码登录**<br>**必须使用密码登录**<br>可以输入以下命令来切换登录方式：
 
      ```
      npm run login
@@ -309,7 +294,7 @@
 
      可以修改登录方式，并且如果遇到密保验证的话，请选择**短信验证码**验证
 
-  - 如果还是登录不上的话，请用记事本打开 `Yunzai-Bot\config\config\qq.yaml` ，找到
+  - 如果还是登录不上的话(遇到错误码 45)，请用记事本打开 `Yunzai-Bot\config\config\qq.yaml` ，找到
 
     ```yaml
     # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
@@ -330,13 +315,13 @@
 - `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
 
   - 方法一(推荐):
-    先执行
+    先执行(用来切换下载源到 npmmirror)
 
     ```
     pnpm config set puppeteer_download_host=https://npmmirror.com/mirrors
     ```
 
-    再执行
+    再执行(用来安装 puppeteer)
 
     ```
     node ./node_modules/puppeteer/install.js
@@ -456,46 +441,22 @@
 
 ## 2023.3.10 更新到最新的云崽
 
-1. 执行
+<a name="update"> </a>
+
+1. 执行(为了切换到喵喵的云崽)
 
    ```
    git remote set-url origin https://gitee.com/yoimiya-kokomi/Yunzai-Bot.git && git checkout main && git pull
    ```
 
-2. 执行
+2. 执行(为了重置到最新的更新)
 
    ```
    git reset --hard origin/main
    ```
 
-3. 执行
+3. 执行(为了升级依赖)
    ```
    pnpm update
    ```
-4. 进入`Yunzai-Bot\data`，找到自己的**QQ 号文件夹**，与 **device.json** 把这两个东西删掉 (没有就无视)
-
-5. `node app` 正常启动云崽即可，目前<br>**必须使用密码登录**<br>**必须使用密码登录**<br>**必须使用密码登录**<br>可以输入以下命令来切换登录方式：
-
-   ```
-   npm run login
-   ```
-
-   可以修改登录方式，并且如果遇到密保验证的话，请选择**短信验证码**验证
-
-- 如果还是登录不上的话，请用记事本打开 `Yunzai-Bot\config\config\qq.yaml` ，找到
-
-  ```yaml
-  # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
-  platform: 5
-  ```
-
-  改成
-
-  ```yaml
-  # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
-  platform: 4
-  ```
-
-- 最后如果还是还是登不上的话(遇到错误码 237)，就换个小号(可以新注册)
-
-- 感谢 @XxxX 提供的方法
+4. `node app` 正常启动云崽即可，[登录失败请点我](#bbgd)
