@@ -33,7 +33,7 @@
    - 再执行
 
      ```
-     pnpm install -P
+     pnpm install -P --registry https://registry.npmmirror.com
      ```
 
      (视频里没有执行第一条命令，请以本教程为准)
@@ -345,13 +345,13 @@
     3. 将 `puppeteer` 文件夹复制到 `C:\Users\你自己的电脑的名字\.cache` 替换掉**同名**的文件夹
     4. 正常启动即可
 
-    - 如果还是不行就，删掉 `node_modules` 文件夹，然后再重新执行一次 `pnpm install -P`
+    - 如果还是不行就，删掉 `node_modules` 文件夹，然后再重新执行一次 `pnpm install -P --registry https://registry.npmmirror.com`
 
 - `pnpm start` 报错？
 
   - 把 `Yunzai-bot/node_modules` 文件夹改成 `old` ，然后执行<br>
     ```
-    pnpm install -P
+    pnpm install -P --registry https://registry.npmmirror.com
     ```
     之后正常启动即可
 
