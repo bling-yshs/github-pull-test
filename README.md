@@ -18,7 +18,7 @@
 
 3. 进入 Yunzai-bot 文件夹
 
-4. 安装 pnpm (安装一次就够了)：
+4. 安装 pnpm (安装一次永久有效)：
 
    ```
    npm install pnpm -g --registry=https://registry.npmmirror.com
@@ -26,17 +26,25 @@
 
 5. 安装云崽本体的依赖：
 
-   - 先执行
-     ```
-     pnpm config set puppeteer_download_host=https://npmmirror.com/mirrors
-     ```
-   - 再执行
+   - 国内电脑先执行：
 
      ```
-     pnpm install -P --registry https://registry.npmmirror.com
+     pnpm config set registry https://registry.npmmirror.com
      ```
 
-     (视频里没有执行第一条命令，请以本教程为准)
+     和
+
+     ```
+     pnpm config set puppeteer_download_host=https://registry.npmmirror.com
+     ```
+
+     > (上方命令是用来更换下载源的，执行一次永久有效)
+
+   - 然后无论国内外电脑，都统一执行(为了安装依赖)：
+
+     ```
+     pnpm install -P
+     ```
 
 6. 启动云崽：
    ```
