@@ -1,5 +1,13 @@
 # 云崽 bot-v3 安装步骤
 
+## 2023.3.23 的新问题
+
+- 问题：更新面板时，弹出 puppeteer 的 cmd 窗口
+
+  - 暂时的解决办法：执行 `git reset --hard a08b46b` 来暂时修复
+
+- 这个问题可能非常严重，并且无法解决，具体请看 [https://gitee.com/yoimiya-kokomi/Yunzai-Bot/pulls/34](https://gitee.com/yoimiya-kokomi/Yunzai-Bot/pulls/34)
+
 > 本教程支持的操作系统：Win10 及以上版本、Windows Server 2012 及以上版本
 > **下方密码统一为 0000**  
 > **以下命令如果没有特别指明的话，都是在云崽根目录下执行**  
@@ -220,6 +228,8 @@
 - 很简单，将插件下载好后放入 `Yunzai-bot/plugins/example` 里即可
   <br>
   <img src="picture/js_plugins.png" width="50%">
+
+<a name="newProblem"></a>
 
 ---
 
