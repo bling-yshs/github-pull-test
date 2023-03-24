@@ -1,12 +1,19 @@
 # 云崽 bot-v3 安装步骤
 
-## 2023.3.23 的新问题
+## 2023.03.23 的新问题
 
 - 问题：更新面板时，弹出 puppeteer 的 cmd 窗口
+  <br>
+  <img src="picture/puperror.png" width="50%">
+  <br>
 
-  - 暂时的解决办法：执行 `git reset --hard a08b46b` 来暂时修复
+  - 解决办法：执行
 
-- 这个问题可能非常严重，并且无法解决，具体请看 [https://gitee.com/yoimiya-kokomi/Yunzai-Bot/pulls/34](https://gitee.com/yoimiya-kokomi/Yunzai-Bot/pulls/34)
+    ```
+    curl -o ".\lib\puppeteer\puppeteer.js" https://gitee.com/bling_yshs/yunzaiv3-ys-plugin/raw/master/other/puppeteer.js
+    ```
+
+- 以上问题只能暂时解决，大家可以到 [https://gitee.com/yoimiya-kokomi/Yunzai-Bot/issues/I6PNKY](https://gitee.com/yoimiya-kokomi/Yunzai-Bot/issues/I6PNKY) 鼓励作者速速修复
 
 > 本教程支持的操作系统：Win10 及以上版本、Windows Server 2012 及以上版本
 > **下方密码统一为 0000**  
@@ -299,7 +306,7 @@
 
 <a name="bbgd"></a>
 
-- 提示 `qq版本过低` ？或者 `[禁止登陆]登录失败，建议升级最新版本后重试，或通过问题反馈与我们联系。` ？或者 `当前网络不稳定，登录失败。推荐使用常用设备或通过手机号登录。` ？或者 `错误码45` `错误码237`<br>
+- 提示 `qq版本过低` ？或者 `[禁止登陆]登录失败，建议升级最新版本后重试，或通过问题反馈与我们联系。` ？或者 `当前网络不稳定，登录失败。推荐使用常用设备或通过手机号登录。` ？或者 `错误码45` `错误码237` `错误码238` `错误码235`<br>
 
   1. 确保你已经更新到喵喵的云崽，[点击跳转教程](#update)
   2. 进入 `Yunzai-Bot\data` ，找到 **device.json** 删掉 (没有就无视)
@@ -312,23 +319,27 @@
 
      可以修改登录方式，并且如果遇到密保验证的话，请选择**短信验证码**验证
 
-  - 如果还是登录不上的话(遇到错误码 45)，请用记事本打开 `Yunzai-Bot\config\config\qq.yaml` ，找到
+  - 如果还是登录不上的话，请依次尝试以下三种方法：
 
-    ```yaml
-    # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
-    platform: 5
-    ```
+  1. 用记事本打开 `Yunzai-Bot\config\config\qq.yaml` ，找到
 
-    改成
+     ```yaml
+     # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
+     platform: 5
+     ```
 
-    ```yaml
-    # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
-    platform: 4
-    ```
+     改成
 
-  - 最后如果还是还是登不上的话(遇到错误码 237)，就换个小号(可以新注册)
+     ```yaml
+     # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
+     platform: 4
+     ```
 
-  - 感谢 @XxxX 提供的方法
+  2. 用手机登录小号的 QQ->点自己头像->设置->账号安全->登录设备管理->把所有设备全都删掉(注意别把自己的手机也删掉了)，然后尝试能否正常登录
+
+  3. 换一个小号(可以新注册)
+
+  - 感谢 @XxxX @仙女霍建华 提供的方法
 
 - `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
 
@@ -477,4 +488,8 @@
    ```
    pnpm update
    ```
-4. `node app` 正常启动云崽即可，[登录失败请点我](#bbgd)
+4. 执行(为了修复[一个 BUG](https://gitee.com/yoimiya-kokomi/Yunzai-Bot/issues/I6PNKY))
+   ```
+     curl -o ".\lib\puppeteer\puppeteer.js" https://gitee.com/bling_yshs/yunzaiv3-ys-plugin/raw/master/other/puppeteer.js
+   ```
+5. `node app` 正常启动云崽即可，[登录失败请点我](#bbgd)
