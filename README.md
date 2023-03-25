@@ -1,19 +1,15 @@
 # 云崽 bot-v3 安装步骤
 
-## 2023.03.23 的新问题
+## 2023.03.25 的新问题
 
-- 问题：更新面板时，弹出 puppeteer 的 cmd 窗口
+- 问题 ①：更新面板时，弹出 puppeteer 的 cmd 窗口
   <br>
   <img src="picture/puperror.png" width="50%">
   <br>
 
-  - 解决办法：执行
+- 问题 ②：Chromium 实例关闭或崩溃
 
-    ```
-    curl -o ".\lib\puppeteer\puppeteer.js" https://gitee.com/bling_yshs/yunzaiv3-ys-plugin/raw/master/other/puppeteer.js
-    ```
-
-- 以上问题只能暂时解决，大家可以到 [https://gitee.com/yoimiya-kokomi/Yunzai-Bot/issues/I6PNKY](https://gitee.com/yoimiya-kokomi/Yunzai-Bot/issues/I6PNKY) 鼓励作者速速修复
+- 解决办法均为：[点击跳转教程](#pup)
 
 > 本教程支持的操作系统：Win10 及以上版本、Windows Server 2012 及以上版本
 > **下方密码统一为 0000**  
@@ -287,7 +283,7 @@
     };
     ```
 
-    将 `url: 'https://enka.network/` 改为 `url: 'https://enka.microgg.cn/`
+    将 `url: 'https://enka.network/` 改为 `url: 'https://enka.microgg.cn/'`
     **最后保存重启即可**
 
     - 改完还是不行？
@@ -341,10 +337,17 @@
 
   - 感谢 @XxxX @仙女霍建华 提供的方法
 
+<a name="pup"></a>
+
 - `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
 
-  - 方法一(推荐):
-    先执行(用来切换下载源到 npmmirror)
+  - 先执行(用来更新依赖到最新)
+
+    ```
+    pnpm update
+    ```
+
+    再执行(用来切换下载源到 npmmirror)
 
     ```
     pnpm config set puppeteer_download_host=https://npmmirror.com/mirrors
@@ -357,24 +360,6 @@
     ```
 
     等待进度条走完后，正常启动即可
-
-  - 方法二:
-
-    1. 下载这个压缩包 (随便选一个网盘下载就行，都是一样的)<br>
-       [微软 OneDrive (推荐，无需登录，但是网页打开比较慢，移动宽带不推荐)](https://alist.learnonly.xyz/%20%F0%9F%94%93%20%E4%B8%80%E9%97%AA%E6%9D%82%E9%A1%B9/puppeteer.rar)
-       <br>
-       [123 网盘(推荐 无需登录)](https://www.123pan.com/s/tsd9-FrCJv.html)
-       <br>
-       [阿里云盘](https://www.aliyundrive.com/s/oqFcugHsWHe)
-       <br>
-       [天翼云盘 访问码：fl9e](https://cloud.189.cn/web/share?code=iaua6nfIRvIf)
-       <br>
-       [百度云盘](https://pan.baidu.com/s/1GwvP1hUFW6s6i14mvdyrBw?pwd=uvjs)
-    2. 解压，得到名为 `puppeteer` 文件夹
-    3. 将 `puppeteer` 文件夹复制到 `C:\Users\你自己的电脑的名字\.cache` 替换掉**同名**的文件夹
-    4. 正常启动即可
-
-    - 如果还是不行就，删掉 `node_modules` 文件夹，然后再重新执行一次 `pnpm install -P --registry https://registry.npmmirror.com`
 
 - `pnpm start` 报错？
 
