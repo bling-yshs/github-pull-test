@@ -341,7 +341,17 @@
 
 - `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
 
-  - 先执行(用来更新依赖到最新)
+  - 先执行(用来更新云崽)
+
+    ```
+    git pull
+    ```
+
+    ```
+    git reset --hard origin/main
+    ```
+
+    再执行(用来更新依赖到最新)
 
     ```
     pnpm update
