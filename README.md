@@ -1,23 +1,22 @@
 # 云崽 bot-v3 安装步骤
 
-## 2023.03.25 的新问题
+> 本教程支持的操作系统：Win10 及以上版本、**Windows Server 2019** 及以上版本  
+> 下方密码统一为 **0000**  
+> 以下命令如果没有特别指明的话，都是在**云崽根目录**下执行  
+> 视频内的命令可能有误，**一切步骤以本安装教程内的为准**  
+> 验证 ticket 时，最好使用 **新 edge** 浏览器
 
-- 问题 ①：更新面板时，弹出 puppeteer 的 cmd 窗口
-  <br>
-  <img src="picture/puperror.png" width="50%">
-  <br>
+> 不支持 Windows Server 2012，如果云服务器无法安装 2019，那么请使用 Linux 系统(推荐 unbuntu)，具体教程看下方 Linux 安装教程
 
-- 问题 ②：Chromium 实例关闭或崩溃
+## (新)Linux 下安装云崽
 
-- 解决办法均为：[点击跳转教程](#pup)
+**只推荐服务器无法安装 Windows Server 2019 的人使用**
 
-> 本教程支持的操作系统：Win10 及以上版本、Windows Server 2012 及以上版本
-> **下方密码统一为 0000**  
-> **以下命令如果没有特别指明的话，都是在云崽根目录下执行**  
-> **视频内的命令可能有误，一切步骤以本安装教程内的为准**  
-> **验证 ticket 时，最好使用 edge 浏览器**
+- 查看 [https://trss.me/Install/Docker.html](https://trss.me/Install/Docker.html)
+- 执行上方网页内的 `容器安装` 命令来一键安装云崽
+- 有任何问题都可以到 [https://gitee.com/TimeRainStarSky/Yunzai](https://gitee.com/TimeRainStarSky/Yunzai) 发 issue 问作者，**Linux 下的云崽问题请勿向我提问**
 
-## 本体安装步骤
+## (正片)Windows 下的云崽本体安装步骤
 
 1. 下载 node,git,redis [https://yshs.lanzouy.com/b09zk5u1g](https://yshs.lanzouy.com/b09zk5u1g)
 
