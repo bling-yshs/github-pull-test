@@ -62,8 +62,7 @@
    ```
 
 - **注意登录的时候一定要用密码登录**
-- **注意登录的时候一定要用密码登录**
-- **注意登录的时候一定要用密码登录**
+- **并且一定要选择 MACOS 方式登录**
 
 > 一键启动脚本 [https://yshs.lanzouy.com/b09zlibch](https://yshs.lanzouy.com/b09zlibch)
 
@@ -106,6 +105,8 @@
 ---
 
 ## 插件安装步骤
+
+注意安装插件之前，**一定要先关闭云崽**
 
 ### 云崽插件库：[https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 
@@ -173,57 +174,13 @@
 
 - 插件设置命令： `#图鉴设置`
 
-### [py 插件(宵鸟插件)](https://gitee.com/realhuhu/py-plugin)(无特殊需求则不推荐安装)
+### [枫叶插件(小黑子插件)](https://gitee.com/kesally/hs-qiqi-cv-plugin.git)
 
-- 先安装 [Python3.10.8](https://yshs.lanzouy.com/b09zlrj8f)
-
-  - 记得勾选 `Add python.exe to PATH`
-    <br>
-    <img src="picture/add_py_to_PATH.png" width="50%">
-
-- py 插件安装命令：
-
+- 枫叶插件安装命令
   ```
-  git clone --depth=1 https://gitee.com/realhuhu/py-plugin.git ./plugins/py-plugin/
+  git clone --depth=1  https://gitee.com/kesally/hs-qiqi-cv-plugin.git  ./plugins/hs-qiqi-plugin
   ```
-
-- py 依赖安装命令：
-
-  ```
-  pnpm install iconv-lite @grpc/grpc-js @grpc/proto-loader -w
-  ```
-
-- 进入 `Yunzai-Bot\plugins\py-plugin` 文件夹，点击地址栏，删掉里面的内容，并且输入 `cmd` 然后回车，会打开命令行窗口，如下图所示
-  <br>
-  <img src="picture/pycmd.gif" width="50%">
-
-- 我们先更换一下下载源，因为 python 的官方源下载很慢。我们在打开的 cmd 里先执行
-
-  ```
-  pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple
-  ```
-
-  然后继续在 cmd 里执行
-
-  ```
-  python install
-  ```
-
-- 当提示安装完成后，**关掉 cmd** 再按同样的方法**再开一次 cmd**，在里面执行
-
-  ```
-  poetry install
-  ```
-
-- 等待安装完后就代表 py 插件安装成功了
-
-- py 插件获取插件的方法请查看 [py 插件获取插件教程](https://gitee.com/realhuhu/py-plugin#221-%E8%8E%B7%E5%8F%96%E6%8F%92%E4%BB%B6) 这里不再赘述
-
-- 启动时候提示 python 服务器已关闭？
-
-  - 我不知道怎么解决，python 破事多..
-
-- **任何 py 插件的问题都不要来问我，我不知道**
+-
 
 ### [js 格式插件通用安装方法](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index#js插件索引example)
 
@@ -314,9 +271,9 @@
 
      可以修改登录方式，并且如果遇到密保验证的话，请选择**短信验证码**验证
 
-  - 如果还是登录不上的话，请依次尝试以下三种方法：
+  - 如果还是登录不上的话，请尝试以下三种方法：
 
-  1. 用记事本打开 `Yunzai-Bot\config\config\qq.yaml` ，找到
+  1. (此方法可以解决错误码 45，错误码 238)用记事本打开 `Yunzai-Bot\config\config\qq.yaml` ，找到
 
      ```yaml
      # 1:安卓手机、 2:aPad 、 3:安卓手表、 4:MacOS 、 5:iPad
@@ -332,7 +289,7 @@
 
   2. 用手机登录小号的 QQ->点自己头像->设置->账号安全->登录设备管理->把所有设备全都删掉(注意别把自己的手机也删掉了)，然后尝试能否正常登录
 
-  3. 换一个小号(可以新注册)
+  3. (此方法可以解决错误码 237，错误码 235)换一个小号(可以新注册)
 
   - 感谢 @XxxX @仙女霍建华 提供的方法
 
@@ -354,6 +311,10 @@
 
     ```
     pnpm update
+    ```
+
+    ```
+    pnpm install -P
     ```
 
     再执行(用来切换下载源到 npmmirror)
@@ -479,11 +440,17 @@
    ```
 
 3. 执行(为了升级依赖)
+
    ```
    pnpm update
    ```
-4. 执行(为了修复[一个 BUG](https://gitee.com/yoimiya-kokomi/Yunzai-Bot/issues/I6PNKY))
+
    ```
-     curl -o ".\lib\puppeteer\puppeteer.js" https://gitee.com/bling_yshs/yunzaiv3-ys-plugin/raw/master/other/puppeteer.js
+   pnpm install -P
+   ```
+
+4. 执行
+   ```
+     node ./node_modules/puppeteer/install.js
    ```
 5. `node app` 正常启动云崽即可，[登录失败请点我](#bbgd)
