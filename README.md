@@ -295,41 +295,19 @@
 
 <a name="pup"></a>
 
-- `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
+- Windows Server 2012 `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
 
-  - 先执行(用来更新云崽)
-
-    ```
-    git pull
-    ```
+  - 执行(为了降级 puppeteer 到 19.7.3)
 
     ```
-    git reset --hard origin/main
+    pnpm install puppeteer@19.7.3 -w
     ```
 
-    再执行(用来更新依赖到最新)
-
-    ```
-    pnpm update
-    ```
-
-    ```
-    pnpm install -P
-    ```
-
-    再执行(用来切换下载源到 npmmirror)
-
-    ```
-    pnpm config set puppeteer_download_host=https://npmmirror.com/mirrors
-    ```
-
-    再执行(用来安装 puppeteer)
+    再执行(为了安装旧版 Chromium)
 
     ```
     node ./node_modules/puppeteer/install.js
     ```
-
-    等待进度条走完后，正常启动即可
 
 - `pnpm start` 报错？
 
