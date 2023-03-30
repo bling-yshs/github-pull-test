@@ -311,11 +311,10 @@
 
 - `pnpm start` 报错？
 
-  - 把 `Yunzai-bot/node_modules` 文件夹改成 `old` ，然后执行<br>
+  - 执行
     ```
-    pnpm install -P --registry https://registry.npmmirror.com
+    pnpm install pm2 -w
     ```
-    之后正常启动即可
 
 - 下载安装云崽本体提示 `could not create work tree dir` ？ 或者 `计算机积极拒绝连接` ？
 
