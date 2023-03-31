@@ -8,6 +8,20 @@
 
 > 不支持 Windows Server 2012，如果云服务器无法安装 2019，那么请使用 Linux 系统(推荐 unbuntu)，具体教程看下方 Linux 安装教程
 
+## (新)云崽启动器
+
+- 最近两天随手搓了个云崽启动器，内置了云崽的**一键安装，一键启动，一键关闭，一键切换账号**，启动器本身**支持自动升级**，还有其它各种功能，以后可能还会加入各种 BUG 的一键修复，欢迎大家尝鲜使用
+
+- 下载地址 [https://yshs.lanzouy.com/b0a0adzaj
+  ](https://yshs.lanzouy.com/b0a0adzaj) 密码 0000
+
+- 前置条件：电脑需要装有 `git` 和 `node.js`
+
+- 使用教程：把启动器下载好，放到与 `Yunzai-bot` 文件夹的同一个目录下就行
+  <br>
+  <img src="picture/launcher.png" width="50%">
+  <br>
+
 ## (新)Linux 下安装云崽
 
 **只推荐服务器无法安装 Windows Server 2019 的人使用**
