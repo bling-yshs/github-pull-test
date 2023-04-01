@@ -309,7 +309,7 @@
 
 <a name="pup"></a>
 
-- Windows Server 2012 `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
+- `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
 
   - 执行(为了降级 puppeteer 到 19.7.3)
 
