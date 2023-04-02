@@ -22,6 +22,8 @@
   <img src="picture/launcher.png" width="50%">
   <br>
 
+- 需要启动器有什么功能的都可以提 qwq
+
 ## (新)Linux 下安装云崽
 
 **只推荐服务器无法安装 Windows Server 2019 的人使用**
