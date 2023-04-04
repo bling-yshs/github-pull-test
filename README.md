@@ -325,6 +325,17 @@
     node ./node_modules/puppeteer/install.js
     ```
 
+- 云崽一发帮助图片就弹出莫名其妙的浏览器窗口？
+
+  - `#更新`
+
+  - ```
+    pnpm install puppeteer -w
+    ```
+  - ```
+    node ./node_modules/puppeteer/install.js
+    ```
+
 - `pnpm start` 报错？
 
   - 执行
