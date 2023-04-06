@@ -246,23 +246,6 @@
 
   - `#使用全部ck`
 
-- `#更新面板` 用不了？ `#更新面板` 显示服务器负载过高？
-
-  - 解决办法：进入`Yunzai-Bot\plugins\miao-plugin\config`文件夹，找到`profile_default`文件，复制粘贴一份，并将新的那一份改名为`profile`，右键编辑`profile`，找到
-
-    ```js
-    export const enkaApi = {
-      url: "https://enka.network/", // 请求API地址，可从上方提供的API地址中进行选择
-      proxyAgent: "", // 请求的proxy配置，如无需proxy则留空
-    };
-    ```
-
-    将 `url: 'https://enka.network/` 改为 `url: 'https://enka.microgg.cn/'`
-    **最后保存重启即可**
-
-    - 改完还是不行？
-      - 我的建议是，**等修复**
-
 ### GitBash 内报错类
 
 - 输完密码提示：需要获取滑动验证码 ticket？
@@ -315,7 +298,13 @@
 
 - `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
 
-  - 执行(为了降级 puppeteer 到 19.7.3)
+  - 执行(为了卸载 puppeteer)
+
+    ```
+    pnpm uninstall puppeteer
+    ```
+
+    执行(为了降级 puppeteer 到 19.7.3)
 
     ```
     pnpm install puppeteer@19.7.3 -w
@@ -330,6 +319,10 @@
 - 云崽一发帮助图片就弹出莫名其妙的浏览器窗口？
 
   - `#更新`
+
+  - ```
+    pnpm uninstall puppeteer
+    ```
 
   - ```
     pnpm install puppeteer -w
