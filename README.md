@@ -1,6 +1,6 @@
 # 云崽 bot-v3 安装步骤
 
-## 目前#更新面板坏了，具体我也不知道怎么办，有了解的可以告诉我
+
 
 > 本教程支持的操作系统：Win10 及以上版本、**Windows Server 2019** 及以上版本  
 > 下方密码统一为 **0000**  
@@ -9,6 +9,8 @@
 > 验证 ticket 时，最好使用 **新 edge** 浏览器
 
 > 不支持 Windows Server 2012，如果云服务器无法安装 2019，那么请使用 Linux 系统(推荐 unbuntu)，具体教程看下方 Linux 安装教程
+
+## 目前 #更新面板 坏了，具体我也不知道怎么办，有了解的可以告诉我
 
 ## (新)云崽启动器
 
@@ -325,7 +327,7 @@
     ```
 
   - ```
-    pnpm install puppeteer -w
+    pnpm install puppeteer@19.8.3 -w
     ```
   - ```
     node ./node_modules/puppeteer/install.js
