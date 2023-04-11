@@ -8,8 +8,6 @@
 
 > 不支持 Windows Server 2012，如果云服务器无法安装 2019，那么请使用 Linux 系统(推荐 unbuntu)，具体教程看下方 Linux 安装教程
 
-## 目前 #更新面板 坏了，具体我也不知道怎么办，有了解的可以告诉我
-
 ## (新)[云崽启动器](https://gitee.com/bling_yshs/YzLauncher-windows)
 
 - 最近两天随手搓了个云崽启动器，内置了云崽的**一键安装，一键启动，一键关闭，一键切换账号**，启动器本身**支持自动升级**，还有其它各种功能，以后可能还会加入各种 BUG 的一键修复，欢迎大家尝鲜使用
@@ -63,7 +61,7 @@
      和
 
      ```
-     pnpm config set puppeteer_download_host=https://registry.npmmirror.com
+     pnpm config set PUPPETEER_DOWNLOAD_HOST=https://npmmirror.com/mirrors
      ```
 
      > (上方命令是用来更换下载源的，执行一次永久有效)
