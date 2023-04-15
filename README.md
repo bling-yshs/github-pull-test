@@ -6,11 +6,11 @@
 > 视频内的命令可能有误，**一切步骤以本安装教程内的为准**  
 > 验证 ticket 时，最好使用 **新 edge** 浏览器
 
-> 不支持 Windows Server 2012，如果云服务器无法安装 2019，那么请使用 Linux 系统(推荐 unbuntu)，具体教程看下方 Linux 安装教程
+> Windows Server 2012 需要使用下方的**云崽启动器**内的 **BUG 修复->修复 puppeteer Chromium 启动失败** 功能后才能正常使用
 
 ## (新)[云崽启动器](https://gitee.com/bling_yshs/YzLauncher-windows)
 
-- 最近两天随手搓了个云崽启动器，内置了云崽的**一键安装，一键启动，一键关闭，一键切换账号**，启动器本身**支持自动升级**，还有其它各种功能，以后可能还会加入各种 BUG 的一键修复，欢迎大家尝鲜使用
+- 随手搓了个云崽启动器，内置了云崽的**一键安装，一键启动，一键关闭，一键切换账号，各种 BUG 修复**。启动器**支持自动升级**
 
 - 下载地址 [https://yshs.lanzouy.com/b0a0adzaj
   ](https://yshs.lanzouy.com/b0a0adzaj) 密码 0000
@@ -22,15 +22,7 @@
   <img src="picture/launcher.png" width="50%">
   <br>
 
-- 需要启动器有什么功能的都可以提 qwq
-
-## (新)Linux 下安装云崽
-
-**只推荐服务器无法安装 Windows Server 2019 的人使用**
-
-- 查看 [https://trss.me/Install/Docker.html](https://trss.me/Install/Docker.html)
-- 执行上方网页内的 `容器安装` 命令来一键安装云崽
-- 有任何问题都可以到 [https://gitee.com/TimeRainStarSky/Yunzai](https://gitee.com/TimeRainStarSky/Yunzai) 发 issue 问作者，**Linux 下的云崽问题请勿向我提问**
+- 启动器遇到任何问题，或者有其他建议，可以到 [反馈地址 1](https://gitee.com/bling_yshs/YzLauncher-windows/issues) 或者 [反馈地址 2](https://gitee.com/bling_yshs/Yunzai-v3-Installation-Steps/issues) 进行反馈
 
 ## (正片)Windows 下的云崽本体安装步骤
 
