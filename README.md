@@ -10,14 +10,14 @@
 
 ## (新)[云崽启动器](https://gitee.com/bling_yshs/YzLauncher-windows)
 
-- 随手搓了个云崽启动器，内置了云崽的**一键安装，一键启动，一键关闭，一键切换账号，各种 BUG 修复**。启动器**支持自动升级**
+- 随手搓了个云崽启动器，内置了**云崽的一键安装，一键启动，一键关闭，一键切换账号，各种插件的一键安装，还有各种 BUG 修复**。启动器**支持自动升级**
 
 - 下载地址 [https://yshs.lanzouy.com/b0a0adzaj
   ](https://yshs.lanzouy.com/b0a0adzaj) 密码 0000
 
 - 前置条件：电脑需要装有 `git` 和 `node.js`
 
-- 使用教程：把启动器下载好，放到与 `Yunzai-bot` 文件夹的同一个目录下就行
+- 使用教程：把启动器下载好，放到与 `Yunzai-bot` 文件夹的同一个目录下就行(如果还没下载云崽就随便找个文件夹放就行，会自动提示你下载的)
   <br>
   <img src="picture/launcher.png" width="50%">
   <br>
