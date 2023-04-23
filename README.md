@@ -8,6 +8,13 @@
 
 > Windows Server 2012 需要使用下方的**云崽启动器**内的 **BUG 修复->修复 puppeteer Chromium 启动失败** 功能后才能正常使用
 
+## 最新的公告
+
+1. 最近腾讯风控又升级了，很容易登陆失败，我也没有什么好办法
+2. 视频里的内容略微有点过时，五一我会抽时间重制这个视频的(到时候会教大家使用云崽启动器来启动)
+
+<a name="qdq"></a>
+
 ## (新)[云崽启动器](https://gitee.com/bling_yshs/YzLauncher-windows)
 
 - 随手搓了个云崽启动器，内置了**云崽的一键安装，一键启动，一键关闭，一键切换账号，各种插件的一键安装，还有各种 BUG 修复**。启动器**支持自动升级**
@@ -118,7 +125,7 @@
 
 ### 云崽插件库：[https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 
-### [喵喵插件](https://gitee.com/yoimiya-kokomi/miao-plugin)
+### [喵喵插件](https://gitee.com/yoimiya-kokomi/miao-plugin) [(云崽启动器可一键安装)](#qdq)
 
 - 喵喵插件安装命令：
 
@@ -138,7 +145,7 @@
 
 - 推荐执行： `#喵喵更新图像` 以及 `#喵喵设置帮助 开启`
 
-### [锅巴插件](https://gitee.com/guoba-yunzai/guoba-plugin)
+### [锅巴插件](https://gitee.com/guoba-yunzai/guoba-plugin) [(云崽启动器可一键安装)](#qdq)
 
 - 锅巴插件安装命令：
 
@@ -156,7 +163,7 @@
 
 - 帮助菜单命令： `#锅巴帮助`
 
-### [逍遥插件(图鉴插件)](https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin)
+### [逍遥插件(图鉴插件)](https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin) [(云崽启动器可一键安装)](#qdq)
 
 - 逍遥插件安装命令：
 
@@ -182,7 +189,7 @@
 
 - 插件设置命令： `#图鉴设置`
 
-### [枫叶插件(小黑子插件)](https://gitee.com/kesally/hs-qiqi-cv-plugin.git)
+### [枫叶插件(小黑子插件)](https://gitee.com/kesally/hs-qiqi-cv-plugin.git) [(云崽启动器可一键安装)](#qdq)
 
 - 枫叶插件安装命令
   ```
@@ -222,7 +229,9 @@
 
 - cookie 绑定失败？
 
-  - 请把云崽 `#更新` 一下 然后看 [新的 cookie 获取方法](https://www.bilibili.com/video/BV1TN4y1N74E?p=9) ，这是电脑的方法，手机的解决方法请看[https://note.youdao.com/s/Jc87XUq0](https://note.youdao.com/s/Jc87XUq0)
+  - 方法一(推荐):安装逍遥插件后，对机器人发送 `#扫码登录` 即可绑定 cookie
+
+  - 方法二：[新的 cookie 获取方法](https://www.bilibili.com/video/BV1TN4y1N74E?p=9) ，这是电脑的方法，手机的解决方法请看[https://note.youdao.com/s/Jc87XUq0](https://note.youdao.com/s/Jc87XUq0)
 
 - 签到显示 `验证码失败` ?
 
@@ -249,7 +258,7 @@
 
 <a name="bbgd"></a>
 
-- 提示 `qq版本过低` ？或者 `[禁止登陆]登录失败，建议升级最新版本后重试，或通过问题反馈与我们联系。` ？或者 `当前网络不稳定，登录失败。推荐使用常用设备或通过手机号登录。` ？或者 `错误码45` `错误码237` `错误码238` `错误码235`<br>
+- 提示 `qq版本过低` ？或者 `[禁止登陆]登录失败，建议升级最新版本后重试，或通过问题反馈与我们联系。` ？或者 `当前网络不稳定，登录失败。推荐使用常用设备或通过手机号登录。` ？或者 `错误码45` `错误码237` `错误码238` `错误码235`<br> [(云崽启动器可一键修复)](#qdq)
 
   1. 确保你已经更新到喵喵的云崽，[点击跳转教程](#update)
   2. 进入 `Yunzai-Bot\data` ，找到 **device.json** 删掉 (没有就无视)
@@ -286,7 +295,7 @@
 
 <a name="pup"></a>
 
-- `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？
+- `node app` 后提示 puppeteer chromium 启动失败？Chromium 实例关闭或崩溃？ [(云崽启动器可一键修复)](#qdq)
 
   - 执行(为了卸载 puppeteer)
 
@@ -306,7 +315,7 @@
     node ./node_modules/puppeteer/install.js
     ```
 
-- 云崽一发帮助图片就弹出莫名其妙的浏览器窗口？
+- 云崽一发帮助图片就弹出莫名其妙的浏览器窗口？ [(云崽启动器可一键修复)](#qdq)
 
   - `#更新`
 
