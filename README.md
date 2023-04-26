@@ -10,8 +10,16 @@
 
 ## 最新的公告
 
-1. 最近腾讯风控又升级了，很容易登陆失败，我也没有什么好办法
-2. 视频里的内容略微有点过时，五一我会抽时间重制这个视频的(到时候会教大家使用云崽启动器来启动)
+- 如果遇到登录失败错误码 45 的话，可以尝试(不保证有效)：<br>
+
+  - 方法一： 可以尝试使用云崽启动器内的 "BUG 修复->修复 错误码 45 错误码 238 QQ 版本过低"
+
+  - 方法二(其实就是方法一的手动版)：
+
+  1. pnpm uninstall icqq 先删除 icqq
+  2. pnpm install icqq -w 再安装最新版 icqq
+  3. 打开 config/config/qq.yaml 把 platform: x 改成 platform: 6
+  4. 打开 data，删除 device.json 和 xxxx_token
 
 <a name="qdq"></a>
 
